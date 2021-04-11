@@ -1,0 +1,14 @@
+{
+  "name": "Finding City Temperature",
+  "description": "Blank Project",
+  "main": "Main.xaml",
+  "dependencies": {},
+  "excludedData": [
+    "Private:*",
+    "*password*"
+  ],
+  "toolVersion": "18.2",
+  "projectVersion": "1.0.6834.24729",
+  "packOptions": {},
+  "runtimeOptions": {}
+}

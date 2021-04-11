@@ -1,0 +1,14 @@
+{
+  "name": "lesson5_OCR with python",
+  "description": "Blank Project",
+  "main": "Main.xaml",
+  "dependencies": {},
+  "excludedData": [
+    "Private:*",
+    "*password*"
+  ],
+  "toolVersion": "18.2",
+  "projectVersion": "1.0.6855.36293",
+  "packOptions": {},
+  "runtimeOptions": {}
+}

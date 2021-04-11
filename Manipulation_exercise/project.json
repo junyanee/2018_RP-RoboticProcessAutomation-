@@ -1,0 +1,14 @@
+{
+  "name": "Manipulation_exercise",
+  "description": "Blank Project",
+  "main": "Main.xaml",
+  "dependencies": {},
+  "excludedData": [
+    "Private:*",
+    "*password*"
+  ],
+  "toolVersion": "18.2",
+  "projectVersion": "1.0.6834.37156",
+  "packOptions": {},
+  "runtimeOptions": {}
+}

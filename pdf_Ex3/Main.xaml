@@ -1,0 +1,138 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Main" mva:VisualBasic.Settings="{x:Null}"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart StartNode="{x:Reference __ReferenceID0}">
+    <FlowStep x:Name="__ReferenceID0">
+      <Sequence>
+        <Sequence.Variables>
+          <Variable x:TypeArguments="ui:GenericValue" Name="total" />
+        </Sequence.Variables>
+        <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base">
+          <ui:AnchorBase.Action>
+            <ActivityAction x:TypeArguments="ui:Anchor">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+              </ActivityAction.Argument>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'text  $674.75USD'">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="141591ec21bdddc3f488fc0f8db02f57" Selector="&lt;ctrl name='$*USD  ' role='text' /&gt;" WaitForReady="INTERACTIVE" />
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="ui:GenericValue">[total]</OutArgument>
+                </ui:GetValue.Value>
+                <sap2010:WorkflowViewState.IdRef>GetValue_1</sap2010:WorkflowViewState.IdRef>
+              </ui:GetValue>
+            </ActivityAction>
+          </ui:AnchorBase.Action>
+          <ui:AnchorBase.AnchorProvider>
+            <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Find Element 'text  TOTAL'" WaitActive="False" WaitVisible="False">
+              <ui:WaitUiElementAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c136d3f88d41376ea26b6decb75640a2" Selector="&lt;wnd app='acrobat.exe' cls='AcrobatSDIWindow' title='invoice * - Adobe Acrobat Pro DC' /&gt;&lt;ctrl name='TOTAL  ' role='text' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:WaitUiElementAppear.Target>
+              <sap2010:WorkflowViewState.IdRef>WaitUiElementAppear_1</sap2010:WorkflowViewState.IdRef>
+            </ui:WaitUiElementAppear>
+          </ui:AnchorBase.AnchorProvider>
+          <sap2010:WorkflowViewState.IdRef>AnchorBase_1</sap2010:WorkflowViewState.IdRef>
+        </ui:AnchorBase>
+        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" Text="[total]" TopMost="True" sap2010:WorkflowViewState.IdRef="MessageBox_1" />
+        <sap2010:WorkflowViewState.IdRef>Sequence_1</sap2010:WorkflowViewState.IdRef>
+      </Sequence>
+      <sap2010:WorkflowViewState.IdRef>FlowStep_1</sap2010:WorkflowViewState.IdRef>
+    </FlowStep>
+    <sap2010:WorkflowViewState.IdRef>Flowchart_1</sap2010:WorkflowViewState.IdRef>
+    <sads:DebugSymbol.Symbol>dzJDOlxVc2Vyc1zspIDtmIRcRG9jdW1lbnRzXFVpUGF0aFxwZGZfRXgzXE1haW4ueGFtbAo+A2YPAgEBQAdhEgIBAkQJXhkCAQVfCV+5AQIBA1YNWyYCAQpKD1IdAgEGX29feAIBBFigAViqAgIBC09CT0kCAQdMogFMzQECAQk=</sads:DebugSymbol.Symbol>
+  </Flowchart>
+  <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="GetValue_1" sap:VirtualizedContainerService.HintSize="314.4,107.2" />
+      <sap2010:ViewStateData Id="WaitUiElementAppear_1" sap:VirtualizedContainerService.HintSize="314.4,107.2" />
+      <sap2010:ViewStateData Id="AnchorBase_1" sap:VirtualizedContainerService.HintSize="707.2,200" />
+      <sap2010:ViewStateData Id="MessageBox_1" sap:VirtualizedContainerService.HintSize="707.2,60" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="729.6,424.8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="FlowStep_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">200,144.02</av:Point>
+            <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Flowchart_1" sap:VirtualizedContainerService.HintSize="614.4,636.8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.7 300,144.02</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="654.4,716.8" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
